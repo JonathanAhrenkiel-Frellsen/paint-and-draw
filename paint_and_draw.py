@@ -43,7 +43,7 @@ class TurtleWindow:
             elif form == "regular polygon" or form == "regular eraser":
                 self.pen.ht()
                 if data[0].isdigit() and int(data[0]) >= 3 and data[1].isdigit() \
-                   and data[3].isdigit() and data[3] > 0:
+                   and data[3].isdigit() and int(data[3]) > 0:
                     self.current_draw = RegularPolygon(x, y, int(data[0]), int(data[1]), data[2], int(data[3]), data[4])
                     self.current_draw.draw(self.pen)
 
@@ -148,7 +148,7 @@ class MenuWindow:
         self.f_1.pack()
 
         self.master.config(menu=self.menubar)
-        self.master.geometry("525x55") #resizes menu window
+        self.master.geometry("550x55") #resizes menu window
 
     def setTkinterWindow(self, tkinter_window): self.tkinter_window = tkinter_window #bottom bar
 
@@ -193,7 +193,7 @@ class MenuWindow:
         self.f_1.destroy()
         self.f_1 = Frame(self.master)
         self.f_1.pack()
-        self.master.geometry("525x55")
+        self.master.geometry("550x55")
 
         self.tkinter_window.f_1.destroy()
         self.tkinter_window.f_1 = Frame()
@@ -212,7 +212,7 @@ class MenuWindow:
         self.f_1.destroy()
         self.f_1 = Frame(self.master)
         self.f_1.pack()
-        self.master.geometry("525x55")
+        self.master.geometry("550x55")
 
         self.tkinter_window.f_1.destroy()
         self.tkinter_window.f_1 = Frame()
@@ -236,7 +236,7 @@ class MenuWindow:
         self.f_1.destroy()
         self.f_1 = Frame(self.master)
         self.f_1.pack()
-        self.master.geometry("525x55")
+        self.master.geometry("550x55")
 
         self.tkinter_window.f_1.destroy()
         self.tkinter_window.f_1 = Frame()
@@ -265,7 +265,7 @@ class MenuWindow:
         self.f_1.destroy()
         self.f_1 = Frame(self.master)
         self.f_1.pack()
-        self.master.geometry("525x55")
+        self.master.geometry("550x55")
 
         self.tkinter_window.f_1.destroy()
         self.tkinter_window.f_1 = Frame()
@@ -296,7 +296,7 @@ class MenuWindow:
         self.f_1.destroy()
         self.f_1 = Frame(self.master)
         self.f_1.pack()
-        self.master.geometry("525x55")
+        self.master.geometry("550x55")
 
         self.tkinter_window.f_1.destroy()
         self.tkinter_window.f_1 = Frame()
@@ -333,7 +333,7 @@ class MenuWindow:
         self.f_1.destroy()
         self.f_1 = Frame(self.master)
         self.f_1.pack()
-        self.master.geometry("525x55")
+        self.master.geometry("550x55")
 
         self.tkinter_window.f_1.destroy()
         self.tkinter_window.f_1 = Frame()
@@ -362,7 +362,7 @@ class MenuWindow:
         self.f_1.destroy()
         self.f_1 = Frame(self.master)
         self.f_1.pack()
-        self.master.geometry("525x55")
+        self.master.geometry("550x55")
 
         self.tkinter_window.f_1.destroy()
         self.tkinter_window.f_1 = Frame()
@@ -414,13 +414,16 @@ class MenuWindow:
         self.f_1.destroy()
         self.f_1 = Frame(self.master)
         self.f_1.pack()
-        self.master.geometry("525x55")
+        self.master.geometry("550x55")
 
         self.tkinter_window.f_1.destroy()
         self.tkinter_window.f_1 = Frame()
         self.tkinter_window.f_1.pack()
 
-        self.tkinter_window.eraser_bg_color = '#%02x%02x%02x' % self.turtle_window.screen.bgcolor() #RGB to hex
+        #RGB to hex
+        self.tkinter_window.eraser_bg_color = "#"
+        for c in self.turtle_window.screen.bgcolor():
+            self.tkinter_window.eraser_bg_color += hex(int(c))[2:]
 
         self.tkinter_window.l_1 = Label(self.tkinter_window.f_1, text="Borracha circular",
                                         fg="cyan", bg="navy", font=("Raleway", 12, "bold"))
@@ -449,7 +452,7 @@ class MenuWindow:
         self.f_1.destroy()
         self.f_1 = Frame(self.master)
         self.f_1.pack()
-        self.master.geometry("525x55")
+        self.master.geometry("550x55")
 
         self.tkinter_window.f_1.destroy()
         self.tkinter_window.f_1 = Frame()
@@ -459,7 +462,9 @@ class MenuWindow:
                                         fg="cyan", bg="navy", font=("Raleway", 12, "bold"))
         self.tkinter_window.l_1.pack(side=LEFT)
 
-        self.tkinter_window.eraser_bg_color = '#%02x%02x%02x' % self.turtle_window.screen.bgcolor()
+        self.tkinter_window.eraser_bg_color = "#"
+        for c in self.turtle_window.screen.bgcolor():
+            self.tkinter_window.eraser_bg_color += hex(int(c))[2:]
 
         self.tkinter_window.l_n_sides = Label(self.tkinter_window.f_1, text="   Lados:", font=("Raleway", 12))
         self.tkinter_window.l_n_sides.pack(side=LEFT)
@@ -488,13 +493,15 @@ class MenuWindow:
         self.f_1.destroy()
         self.f_1 = Frame(self.master)
         self.f_1.pack()
-        self.master.geometry("525x55")
+        self.master.geometry("550x55")
 
         self.tkinter_window.f_1.destroy()
         self.tkinter_window.f_1 = Frame()
         self.tkinter_window.f_1.pack()
 
-        self.tkinter_window.bg_color = '#%02x%02x%02x' % self.turtle_window.screen.bgcolor()
+        self.tkinter_window.bg_color = "#"
+        for c in self.turtle_window.screen.bgcolor():
+            self.tkinter_window.bg_color += hex(int(c))[2:]
 
         self.tkinter_window.l_1 = Label(self.tkinter_window.f_1, text="Limpar tela",
                                         fg="cyan", bg="navy", font=("Raleway", 12, "bold"))
