@@ -4,7 +4,7 @@ Python program simulating Windows's Paint, with Tkinter and Turtle.
 
 ### :clipboard: Requirements
 
-This program was written in Python 3, using the Tkinter and Turtle libraries. Thus, you'll need all of them to make it work.
+This program was written in `Python 3`, using the `Tkinter` and `Turtle` libraries. Thus, you'll need all of them to make it work.
 
 ### :rocket: Launching/Executing
 
