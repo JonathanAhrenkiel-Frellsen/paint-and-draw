@@ -13,4 +13,9 @@ To launch/execute, simply execute the `paint_and_draw.py` file.
 ### :triangular_ruler: Usage
 
 - For the *Free Draw* option, after setting the options and creating it, in order to draw, you must drag the dot that appears on the screen. To start drawing elsewhere, head there with the "pen" up (without dragging) and click once to set the dot's new position.
-- For the other options, after putting the settings and creating/updating the shape, click anywhere to draw it. Obs.: wait until the program finishes drawing the shape before drawing another one (not doing so may cause some odd bugs, and it's all Turtle's fault :turtle:).
+- For the other options, after putting the settings and creating/updating the shape, click anywhere to draw it. Obs.: wait until the program finishes drawing the shape before drawing another one (not doing so may cause some odd bugs, and it's all `Turtle`'s fault :turtle:).
+- For more detailed informations, check the program's inner manual.
+
+### :point_right: Disclaimer
+
+This software was written in Portuguese (sadly :disappointed:), due to a couple of reasons. Maybe one day it'll be translated to English (this is a big maybe actually).
