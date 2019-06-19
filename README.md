@@ -1,4 +1,4 @@
-# :art: paint-and-draw :pencil2:
+# :art: Paint and Draw :pencil2:
 
 Python program simulating Windows' Paint, with Tkinter and Turtle.
 
