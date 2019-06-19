@@ -1,6 +1,6 @@
 # :art: paint-and-draw :pencil2:
 
-Python program simulating Windows's Paint, with Tkinter and Turtle.
+Python program simulating Windows' Paint, with Tkinter and Turtle.
 
 ### :clipboard: Requirements
 
